@@ -121,7 +121,7 @@
 
     // getUserMedia를 통해 local stream을 가져오게 된다.
     navigator.mediaDevices.getUserMedia({
-      audio:false,
+      audio:true,
       video:true
     }) // audio,video값을 스트림으로 가져올 수 있다.
     .then(gotStream)
