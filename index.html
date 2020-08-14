@@ -1,0 +1,144 @@
+<html>
+<head>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta charset="utf-8" />
+    <title>HD_Bank</title>
+
+    <!-- Fonts and icons -->
+  	<script src="./js/plugin/webfont/webfont.min.js"></script>
+  	<script>
+  		WebFont.load({
+  			google: {"families":["Lato:300,400,700,900"]},
+  			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['./css/fonts.min.css']},
+  			active: function() {
+  				sessionStorage.fonts = true;
+  			}
+  		});
+  	</script>
+  	<!-- CSS Files -->
+  	<link rel="stylesheet" href="./css/bootstrap.min.css">
+  	<link rel="stylesheet" href="./css/atlantis.min.css">
+  	<!-- CSS Just for demo purpose, don't include it in your project -->
+  	<link rel="stylesheet" href="./css/demo.css">
+
+</head>
+<style type="text/css">
+    #left_cam{
+            position: fixed; right: 2%; bottom: 4%;
+            min-width: 20%; min-height: 20%;
+            width: 20%; height: 30%; z-index: -100;
+            background: url(polina.jpg) no-repeat;
+            background-size: cover;
+    }
+
+    body{margin:0;background:#000}
+
+    #right_cam{
+            position:fixed;
+            top:50%;left:50%;
+            min-width:100%;min-height:100%;width:auto;height:auto;z-index:-100;
+            -webkit-transform:translateX(-50%) translateY(-50%);
+            transform:translateX(-50%) translateY(-50%);
+
+            background-size:cover;-webkit-transition:1s opacity;transition:1s opacity
+    }
+
+    .title{
+        font-family:Agenda-Light,Agenda\ Light,Agenda,Arial\ Narrow,sans-serif;
+        font-weight:100;
+        background:rgba(0,0,0,.3);
+        color:#fff;
+        padding:2rem;
+        width:33%;
+        margin:2rem;
+        float:left;
+        font-size:1.2rem
+    }
+
+    .wrap{
+      position: fixed; right: 0%; bottom: 40%;
+      font-family:Agenda-Light,Agenda\ Light,Agenda,Arial\ Narrow,sans-serif;
+      font-weight:100;
+      background:rgba(0,0,0,.3);
+      color:#fff;
+      padding:2rem;
+      width:20%;
+      margin:2rem;
+      float:left;
+      font-size:1.2rem
+    }
+
+    #polina{
+      position: relative;
+      top: 30%;
+    }
+
+    h1{
+        font-size:3rem;
+        text-transform:uppercase;
+        margin-top:0;
+        letter-spacing:.3rem
+    }
+
+    a{
+        display:inline-block;color:#fff;text-decoration:none;background:rgba(0,0,0,.5);
+        padding:.5rem;-webkit-transition:.6s background;
+        transition:.6s background
+    }
+
+    a:hover{
+        background:rgba(0,0,0,.9)
+    }
+
+</style>
+<body>
+  <div class="title col-12">
+    <img src="./img/HDlogo.svg" alt="navbar brand" class="navbar-brand">
+    <h1>채팅 화상상담</h1>
+  </div>
+  <video playsinline id="right_cam" controls preload="metadata" autoplay></video>
+  
+  </div>
+
+  <video playsinline id="left_cam" controls preload="metadata" autoplay></video>
+
+
+
+
+  <!-- 스크립트 시작 -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <!--  -->
+  <script src="./js/core/popper.min.js"></script>
+  <script src="./js/core/bootstrap.min.js"></script>
+  <!-- jQuery UI -->
+  <script src="./js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+  <script src="./js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+  <!-- jQuery Scrollbar -->
+  <script src="./js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+  <!-- Chart JS -->
+  <script src="./js/plugin/chart.js/chart.min.js"></script>
+  <!-- jQuery Sparkline -->
+  <script src="./js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+  <!-- Chart Circle -->
+  <script src="./js/plugin/chart-circle/circles.min.js"></script>
+  <!-- Datatables -->
+  <script src="./js/plugin/datatables/datatables.min.js"></script>
+  <!-- Bootstrap Notify -->
+  <script src="./js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+  <!-- jQuery Vector Maps -->
+  <script src="./js/plugin/jqvmap/jquery.vmap.min.js"></script>
+  <script src="./js/plugin/jqvmap/maps/jquery.vmap.world.js"></script>
+  <!-- Sweet Alert -->
+  <script src="./js/plugin/sweetalert/sweetalert.min.js"></script>
+  <!-- Atlantis JS -->
+  <script src="./js/atlantis.min.js"></script>
+  <!--  -->
+
+  <script src="./js/main.js"></script>
+
+</body>
+</html>
