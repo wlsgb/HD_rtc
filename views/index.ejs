@@ -1,0 +1,107 @@
+<html>
+<head>
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <meta charset="utf-8" />
+    <title>HD_Bank</title>
+
+    <!-- Fonts and icons -->
+  	<script src="../js/plugin/webfont/webfont.min.js"></script>
+  	<script>
+  		WebFont.load({
+  			google: {"families":["Lato:300,400,700,900"]},
+  			custom: {"families":["Flaticon", "Font Awesome 5 Solid", "Font Awesome 5 Regular", "Font Awesome 5 Brands", "simple-line-icons"], urls: ['../css/fonts.min.css']},
+  			active: function() {
+  				sessionStorage.fonts = true;
+  			}
+  		});
+  	</script>
+  	<!-- CSS Files -->
+  	<link rel="stylesheet" href="./css/bootstrap.min.css">
+  	<link rel="stylesheet" href="./css/atlantis.min.css">
+  	<!-- CSS Just for demo purpose, don't include it in your project -->
+  	<link rel="stylesheet" href="./css/demo.css">
+</head>
+<!-- 바디 바디 바디 바디 -->
+
+<body>
+
+<hr>
+
+</div>
+  <div class="page-inner mt--5">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-head-row">
+            <div class="card-title">고객 화상상담 현황</div>
+            <div class="card-tools">
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <%resultData.forEach(function(e,index){%>
+          <div class="d-flex">
+            <%if(e[4]==='START'){%>
+              <div class="avatar avatar-online">
+                <span class="avatar-title rounded-circle border border-white bg-info"><%=e[0]%></span>
+            <%}else{%>
+              <div class="avatar avatar-offline">
+                <span class="avatar-title rounded-circle border border-white bg-secondary"><%=e[0]%></span>
+            <%}%>
+            </div>
+            <div class="flex-1 ml-3 pt-1">
+              <%if(e[4]==='START'){%>
+                <h6 class="text-uppercase fw-bold mb-1"><%=e[2]%> <span class="text-success pl-3"><%=e[4]%></span></h6>
+                <a href="<%=e[3]%>"><span class="text-muted"><%=e[3]%></span></a>
+              <%}else{%>
+                <h6 class="text-uppercase fw-bold mb-1"><%=e[2]%> <span class="text-muted pl-3"><%=e[4]%></span></h6>
+                <a href="#"><span class="text-muted">완료된 상담입니다.</span></a>
+              <%}%>
+
+
+            </div>
+            <div class="float-right pt-1">
+              <small class="text-muted"><%=e[6]%></small>
+            </div>
+          </div>
+          <div class="separator-dashed"></div>
+          <%}); %>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- 바디 바디 바디 바디 -->
+  <!-- 스크립트 시작 -->
+  <script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+  <!--  -->
+  <script src="./js/core/popper.min.js"></script>
+  <script src="./js/core/bootstrap.min.js"></script>
+  <!-- jQuery UI -->
+  <script src="./js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+  <script src="./js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
+  <!-- jQuery Scrollbar -->
+  <script src="./js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+  <!-- Chart JS -->
+  <script src="./js/plugin/chart.js/chart.min.js"></script>
+  <!-- jQuery Sparkline -->
+  <script src="./js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+  <!-- Chart Circle -->
+  <script src="./js/plugin/chart-circle/circles.min.js"></script>
+  <!-- Datatables -->
+  <script src="./js/plugin/datatables/datatables.min.js"></script>
+  <!-- Bootstrap Notify -->
+  <script src="./js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+  <!-- jQuery Vector Maps -->
+  <script src="./js/plugin/jqvmap/jquery.vmap.min.js"></script>
+  <script src="./js/plugin/jqvmap/maps/jquery.vmap.world.js"></script>
+  <!-- Sweet Alert -->
+  <script src="./js/plugin/sweetalert/sweetalert.min.js"></script>
+  <!-- Atlantis JS -->
+  <script src="./js/atlantis.min.js"></script>
+
+</body>
+</html>

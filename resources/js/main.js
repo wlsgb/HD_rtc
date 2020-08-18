@@ -108,7 +108,7 @@
         console.log("doAnswer() 실행");
       }else if (message.type === 'answer' && isStarted) {
         pc.setRemoteDescription(new RTCSessionDescription(message));
-      }else if (message.type==='candidate' && isStarted) {
+      }else if (message.type === 'candidate' && isStarted) {
         var candidate = new RTCIceCandidate({
           sdpMLineIndex: message.label,
           candidate: message.candidate
@@ -136,7 +136,6 @@
       localVideo.srcObject = stream;
       sendMessage("got user media");
       if(isInitiator){ // isInitiator가 true이면 maybeStart 함수 호출
-        console.log("function gotStream(stream)--maybeStart() 실행");
         maybeStart(); // isInitiator는 방 최초 생성자 true
       }
     }
