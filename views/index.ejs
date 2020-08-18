@@ -51,12 +51,23 @@
             <%}%>
             </div>
             <div class="flex-1 ml-3 pt-1">
+
               <%if(e[4]==='START'){%>
-                <h6 class="text-uppercase fw-bold mb-1"><%=e[2]%> <span class="text-success pl-3"><%=e[4]%></span></h6>
-                <a href="<%=e[3]%>"><span class="text-muted"><%=e[3]%></span></a>
+
+                <h1 class="text-uppercase fw-bold mb-1"><%=e[2]%>
+                  <span class="text-success pl-3"><%=e[4]%></span>
+                </h1>
+                <div class="row">
+                  <div class="col-3">
+                    <a href="<%=e[3]%>" class="btn btn-primary btn-round"><span class="h4">상담 시작</span></a>
+                  </div>
+                  <div class="col-3">
+                    <a href="https://192.168.0.167:3000/chatEnd?cl_code=<%=e[0]%>" class="btn btn-warning btn-round"><span class="h4">상담 종료</span></a>
+                  </div>
+                </div>
               <%}else{%>
-                <h6 class="text-uppercase fw-bold mb-1"><%=e[2]%> <span class="text-muted pl-3"><%=e[4]%></span></h6>
-                <a href="#"><span class="text-muted">완료된 상담입니다.</span></a>
+                <h3 class="text-uppercase fw-bold mb-1"><%=e[2]%> <span class="text-muted pl-3"><%=e[4]%></span></h3>
+                <a href="#"><span class="text-muted h3">완료된 상담입니다.</span></a>
               <%}%>
 
 
